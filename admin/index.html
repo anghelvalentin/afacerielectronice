@@ -19,15 +19,27 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.21/angular-ui-router.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.6.0/angular-messages.js"></script>
-
+    <script type="text/javascript">
+        $.fn.serializeObject = function() {
+            var o = {};
+            var a = this.serializeArray();
+            $.each(a, function() {
+                if (o[this.name] !== undefined) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                }
+                else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            return o;
+        };
+    </script>
     <script type="text/javascript" src="js/app.js"></script>
 
-    <script type="text/javascript" src="js/serialize.js"></script>
-    <!--<script type="text/javascript" src="js/categories.js"></script>    -->
-    <!--<script type="text/javascript" src="js/products.js"></script>-->
-    <script type="text/javascript" src="js/controllers/categories.controller.js"></script>
-    <script type="text/javascript" src="js/controllers/products.controller.js"></script>
-    
+
     <script type="text/javascript" src="js/controllers/contacts.controller.js"></script>
 
 </head>

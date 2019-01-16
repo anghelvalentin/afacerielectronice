@@ -11,13 +11,13 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
     $stateProvider.state("categories", {
         url: "/categories",
         templateUrl: "views/categories.html",
-        controller: "CategoriesCtrl"
+        // controller: "CategoriesCtrl"
     });
 
      $stateProvider.state("products", {
         url: "/products",
         templateUrl: "views/products.html",
-        controller: "ProductsCtrl"
+        // controller: "ProductsCtrl"
     });
     
     $stateProvider.state("contacts",{

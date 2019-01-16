@@ -3,6 +3,7 @@
 // READ recods on page load
 $(document).ready(function () {
     readRecords(); // calling function
+    
 });
 
 // READ records
@@ -30,7 +31,7 @@ function displayColumns(value) {
 			+ '</td>';
 }
 
-function addRecord() {
+function productAddRecord() {
     $('#id').val('');
     $('#category_id').val('');
     $('#name').val('');

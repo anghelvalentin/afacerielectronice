@@ -64,6 +64,7 @@ function saveRecord() {
 }
 
 function createRecord(formData) {
+    console.log(formData);
     $.ajax({
         url: '/categories/',
         type: 'POST',
