@@ -1,0 +1,29 @@
+<!-- Content Section -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="records_content">
+                <br/>
+                <h3>Contacts</h3>
+                <table id="contacts" class="table table-bordered table-striped">
+                    <tr>
+
+                        <th>Nume</th>
+                        <th>Mail</th>
+                        <th>Mesaj</th>
+                    </tr>
+                    <tr ng-repeat="contact in contacts">
+                        <td>{{contact.name}}</td>
+                        <td>
+                            {{contact.mail}}
+                        </td>
+                        <td>
+                            {{contact.message}}
+                        </td>
+                    </tr>
+                    </<table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Content Section -->

@@ -1,0 +1,35 @@
+<h1>Contact</h1>
+<div class="container">
+    <form name="sendMessageForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" ng-model="contact.name" required/>
+            <div ng-messages="sendMessageForm.name.$error">
+                <div ng-message="required">Introdu numele tau</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="mail">Email</label>
+            <input type="text" name="mail" class="form-control" ng-model="contact.mail" required/>
+            <div ng-messages="sendMessageForm.mail.$error">
+                <div ng-message="required">Introdu mailul</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" class="form-control" ng-model="contact.message"></textarea>
+            <div ng-messages="sendMessageForm.message.$error">
+                <div ng-message="required">Introdu mesajul</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input ng-Disabled="!sendMessageForm.$valid" class="form-control" type="button" value="Send message" ng-click="sendMessage(contact)" />
+        </div>
+
+
+    </form>
+</div>

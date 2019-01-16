@@ -55,6 +55,7 @@ function viewRecord(id) {
 
 function saveRecord() {
     var formData = $('#record_form').serializeObject();
+    console.log(formData);
     if(formData.id) {
         updateRecord(formData);
     } else {

@@ -1,0 +1,24 @@
+<section>
+    <section class="sidebar left">
+        <ul id="categories">
+            <!--<li><a href="#" onClick="showProducts('+category.id+')">'+{{category.name+}}'</a></li>-->
+            <li ng-repeat="category in categories"><a href="#" ng-click="showProducts(category)">{{category.name}}</a></li>
+        </ul>
+    </section>
+    <section id="content">
+        <div class="product" ng-repeat="product in products">
+            <h2>{{product.name}}</h2>
+            <p>{{product.description}}</p>
+            <p>Pret: {{product.price}}</p>
+            <p>Categorie: {{product.category.name}}</p>
+        </div>
+    </section>
+    <section class="sidebar right">
+        <h3>
+            Lorem ipsum
+        </h3>
+        <p>
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
+        </p>
+    </section>
+</section>
